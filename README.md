@@ -50,12 +50,10 @@ Este sistema especialista implementa um motor de decisão para análise de propo
   Execução do comando & resultado a se esperar
 - 1) explicacao_solucao/3
   - Fornece decisão e motivos para qualquer proposta.
-    
   <img width="643" height="105" alt="image" src="https://github.com/user-attachments/assets/5bce6a6f-6fe6-4dc7-b4e4-ebc6f7a20df9" />
   
 - 2) motivo_falha/2
   - Explica especificamente por que uma proposta foi recusada.
-    
   <img width="408" height="61" alt="image" src="https://github.com/user-attachments/assets/c09c6d1b-985f-4f94-ae4c-544849045d86" />
   
 - 3) motivos/2
@@ -77,17 +75,17 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 ###### Métricas e Indicadores ######
 1. DTI (Debt-to-Income Ratio)
 - Fórmula: DTI = (Despesas + Parcela) / Renda × 100
-   <img width="519" height="164" alt="image" src="https://github.com/user-attachments/assets/6f0b90f6-431b-44f1-b7d8-81f9c2fa2d0d" />
+<img width="519" height="164" alt="image" src="https://github.com/user-attachments/assets/6f0b90f6-431b-44f1-b7d8-81f9c2fa2d0d" />
    
 2. LTV (Loan-to-Value Ratio)
 - Fórmula: LTV = Valor Empréstimo / Valor Garantia × 100
-  <img width="514" height="145" alt="image" src="https://github.com/user-attachments/assets/4e30ffa4-30e9-40f8-bf2a-da3c76e5f241" />
+<img width="514" height="145" alt="image" src="https://github.com/user-attachments/assets/4e30ffa4-30e9-40f8-bf2a-da3c76e5f241" />
 
 3. Score de Crédito
-    <img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
+<img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
 
 4. Outros Sinais
-    <img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
+<img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
 
 ##### ********************************** #####
 # Hard Stops (Regras Eliminatórias)
