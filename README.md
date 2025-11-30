@@ -46,32 +46,46 @@ Este sistema especialista implementa um motor de decisão para análise de propo
   - Contém: Análise de cada proposta, dados básicos (solicitante, produto, valor, prazo, taxa, garantia), métricas calculadas (parcela, DTI, LTV), sinais de risco/benefício, pontuação final, decisão (APROVAR / REVISAR / RECUSAR), motivos em texto legível.
   - Um resumo final com total de propostas, quantas aprovadas, revisadas, recusadas e com hard stop.
  
-# Exemplos de Resultados Esperados
+# Exemplos de Resultados Esperados + Predicados Explicativos
   Execução do comando & resultado a se esperar
 - 1) explicacao_solucao/3
+  - Fornece decisão e motivos para qualquer proposta.
   <img width="643" height="105" alt="image" src="https://github.com/user-attachments/assets/5bce6a6f-6fe6-4dc7-b4e4-ebc6f7a20df9" />
+  
 - 2) motivo_falha/2
+  - Explica especificamente por que uma proposta foi recusada.
   <img width="408" height="61" alt="image" src="https://github.com/user-attachments/assets/c09c6d1b-985f-4f94-ae4c-544849045d86" />
+  
 - 3) motivos/2
+  - Retorna lista de motivos (hard stops ou sinais detectados).
   <img width="681" height="99" alt="image" src="https://github.com/user-attachments/assets/a1770419-fff0-4efe-9c15-aef3093f2ffc" />
-- 4) Gerar Contraproposta
-  <img width="393" height="126" alt="image" src="https://github.com/user-attachments/assets/9cc277bf-6456-4dfd-a5a4-51ddaebaeb7a" />
-- 5) Listar todas as recusas
+  
+- 4) contraproposta/5
+    - Sugere ajustes para melhorar viabilidade.
+  <img width="391" height="120" alt="image" src="https://github.com/user-attachments/assets/07574f3d-c83f-4d16-9345-f7faba46299c" />
+
+- 5) rotulo/2 e rotulo_hard/2
+    - Converte códigos técnicos em mensagens legíveis.
+  <img width="326" height="124" alt="image" src="https://github.com/user-attachments/assets/886d35ac-bb63-4128-9a8a-6bd4717be162" />
+
+- 6) Listar todas as recusas
   <img width="443" height="50" alt="image" src="https://github.com/user-attachments/assets/66926971-f89c-410f-ac63-260271571ae5" />
+
+  
 ###### Métricas e Indicadores ######
 1. DTI (Debt-to-Income Ratio)
-  Fórmula: DTI = (Despesas + Parcela) / Renda × 100
+- Fórmula: DTI = (Despesas + Parcela) / Renda × 100
    <img width="519" height="164" alt="image" src="https://github.com/user-attachments/assets/6f0b90f6-431b-44f1-b7d8-81f9c2fa2d0d" />
    
 2. LTV (Loan-to-Value Ratio)
-  Fórmula: LTV = Valor Empréstimo / Valor Garantia × 100
+- Fórmula: LTV = Valor Empréstimo / Valor Garantia × 100
   <img width="514" height="145" alt="image" src="https://github.com/user-attachments/assets/4e30ffa4-30e9-40f8-bf2a-da3c76e5f241" />
 
 3. Score de Crédito
   <img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
 
 4. Outros Sinais
-<img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
+  <img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
 
 ##### ********************************** #####
 # Hard Stops (Regras Eliminatórias)
