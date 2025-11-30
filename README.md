@@ -25,27 +25,32 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 -Clonar o Repositório
   - https://github.com/bialimma/Prova-2---Problemas-L-gicos.git
 
-# Execução (terminal ou prolog)
-- No CMD
-- cd C:\Users\seu_usuario\Documents\credito (alterar conforme o caminho de onde está o arquivo)
-- Dentro da pasta do projeto, rodar:
-    - swipl -s principal.pl 
-- Dentro do prompt do Prolog que abrir, rode:
-    - main.
-- Isso vai:
-  - Ler a base de fatos de entrada.txt --> analisar todas as propostas (loan1, loan2, …) --> gerar um relatório completo em saida.txt (decisões + métricas + motivos + resumo final).
-  - Abrir o "saida.txt" que será gerado na mesma pasta do projeto.
-**************************************************
+# Execução no prolog
 - No Prolog
-  - cd('C:/Users/seu_usuario/Documents/credito'). ( (alterar conforme o caminho de onde está o arquivo)
+  - cd('C:/Users/seu_usuario/Documents/credito'). --> Alterar conforme o caminho de onde está o arquivo (observação, há ponto final no fim dos comandos)
   - Se estiver tudo ok, aparecerá "true"
   - Executar: [principal].
   - Isso vai:
     - Ler a base de fatos de entrada.txt --> analisar todas as propostas (loan1, loan2, …) --> gerar um relatório completo em saida.txt (decisões + métricas + motivos + resumo final).
+    - Gerará alguns "Warning's", que não são erros, pode prosseguir.
   - Abrir o "saida.txt" que será gerado na mesma pasta do projeto.
+    <img width="475" height="254" alt="image" src="https://github.com/user-attachments/assets/ba9f1f03-ce18-42df-a8ca-7499cdcff08d" />
 
 
+ # Entrada e saída de dados 
+- entrada.txt
+  - Contém apenas fatos (ontologia, solicitantes, garantias, propostas).
+  - É lido automaticamente por principal.pl via consult('entrada.txt').
 
+- saida.txt
+  - É gerado/sobrescrito toda vez que você chama main..
+  - Contém: Análise de cada proposta, dados básicos (solicitante, produto, valor, prazo, taxa, garantia), métricas calculadas (parcela, DTI, LTV), sinais de risco/benefício, pontuação final, decisão (APROVAR / REVISAR / RECUSAR), motivos em texto legível.
+  - Um resumo final com total de propostas, quantas aprovadas, revisadas, recusadas e com hard stop.
+ 
+# Exemplos de Resultados Esperados
+Executar o comando:
+?- explicacao_solucao(loan6, Decisao, Motivos).
+  
 
 
 
