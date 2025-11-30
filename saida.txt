@@ -1,0 +1,219 @@
+=== SISTEMA DE CONCESSÃO DE CRÉDITO ===
+
+=== PROPOSTA LOAN1 ===
+Solicitante: ana (29 anos)
+Produto: financiamento_imobiliario
+Valor: R$ 390000.00
+Prazo: 360 meses
+Taxa: 1.2%% a.m.
+Garantia: casa_ana (R$ 520000.00)
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 5763.33
+  DTI (Debt-to-Income): 102.1%%
+  LTV (Loan-to-Value): 75.0%%
+
+SINAIS DETECTADOS:
+  [+30] dti_ruim
+  [+5] ltv_medio
+  [-25] bureau_excelente
+  [-10] emprego_estavel
+
+PONTUAÇÃO TOTAL: 0
+DECISÃO: APROVAR
+MOTIVOS:
+  - DTI muito elevado
+  - LTV moderado
+  - score de crédito excelente
+  - emprego estável (>=24m)
+
+=== PROPOSTA LOAN2 ===
+Solicitante: bruno (22 anos)
+Produto: credito_pessoal
+Valor: R$ 12000.00
+Prazo: 24 meses
+Taxa: 2.5%% a.m.
+Garantia: sem garantia
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 800.00
+  DTI (Debt-to-Income): 60.7%%
+  LTV (Loan-to-Value): 0.0%%
+
+SINAIS DETECTADOS:
+  [+30] dti_ruim
+  [+25] bureau_baixo
+  [+20] atrasos_rec
+  [+10] consultas_alta
+  [+8] emprego_recente
+  [+15] stress_parcela_pessoal
+
+PONTUAÇÃO TOTAL: 108
+DECISÃO: RECUSAR
+MOTIVOS:
+  - DTI muito elevado
+  - score de crédito baixo
+  - atrasos recentes em pagamentos
+  - muitas consultas recentes
+  - emprego recente (<12m)
+  - parcela alta para crédito pessoal
+
+=== PROPOSTA LOAN3 ===
+Solicitante: carla (35 anos)
+Produto: credito_pessoal
+Valor: R$ 8000.00
+Prazo: 36 meses
+Taxa: 2.0%% a.m.
+Garantia: sem garantia
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 382.22
+  DTI (Debt-to-Income): 39.7%%
+  LTV (Loan-to-Value): 0.0%%
+
+SINAIS DETECTADOS:
+  [+15] dti_alto
+  [+10] bureau_medio
+  [-10] emprego_estavel
+  [+15] stress_parcela_pessoal
+
+PONTUAÇÃO TOTAL: 30
+DECISÃO: REVISAR
+MOTIVOS:
+  - DTI elevado
+  - score de crédito mediano
+  - emprego estável (>=24m)
+  - parcela alta para crédito pessoal
+
+=== PROPOSTA LOAN4 ===
+Solicitante: diego (17 anos)
+Produto: credito_pessoal
+Valor: R$ 5000.00
+Prazo: 12 meses
+Taxa: 3.0%% a.m.
+Garantia: sem garantia
+
+HARD STOP DETECTADO: idade_minima
+DECISÃO: RECUSAR
+MOTIVO: idade abaixo do mínimo legal
+
+=== PROPOSTA LOAN5 ===
+Solicitante: elena (42 anos)
+Produto: financiamento_imobiliario
+Valor: R$ 450000.00
+Prazo: 360 meses
+Taxa: 1.1%% a.m.
+Garantia: casa_ana (R$ 520000.00)
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 6200.00
+  DTI (Debt-to-Income): 80.8%%
+  LTV (Loan-to-Value): 86.5%%
+
+SINAIS DETECTADOS:
+  [+30] dti_ruim
+  [+15] ltv_limite
+  [-25] bureau_excelente
+  [-10] emprego_estavel
+
+PONTUAÇÃO TOTAL: 10
+DECISÃO: APROVAR
+MOTIVOS:
+  - DTI muito elevado
+  - LTV muito alto (próximo do limite)
+  - score de crédito excelente
+  - emprego estável (>=24m)
+
+=== PROPOSTA LOAN6 ===
+Solicitante: ana (29 anos)
+Produto: credito_pessoal
+Valor: R$ 15000.00
+Prazo: 24 meses
+Taxa: 2.2%% a.m.
+Garantia: sem garantia
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 955.00
+  DTI (Debt-to-Income): 40.4%%
+  LTV (Loan-to-Value): 0.0%%
+
+SINAIS DETECTADOS:
+  [+15] dti_alto
+  [-25] bureau_excelente
+  [-10] emprego_estavel
+  [+15] stress_parcela_pessoal
+
+PONTUAÇÃO TOTAL: -5
+DECISÃO: APROVAR
+MOTIVOS:
+  - DTI elevado
+  - score de crédito excelente
+  - emprego estável (>=24m)
+  - parcela alta para crédito pessoal
+
+=== PROPOSTA LOAN7 ===
+Solicitante: bruno (22 anos)
+Produto: credito_pessoal
+Valor: R$ 3000.00
+Prazo: 12 meses
+Taxa: 2.8%% a.m.
+Garantia: sem garantia
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 334.00
+  DTI (Debt-to-Income): 44.1%%
+  LTV (Loan-to-Value): 0.0%%
+
+SINAIS DETECTADOS:
+  [+15] dti_alto
+  [+25] bureau_baixo
+  [+20] atrasos_rec
+  [+10] consultas_alta
+  [+8] emprego_recente
+  [+15] stress_parcela_pessoal
+
+PONTUAÇÃO TOTAL: 93
+DECISÃO: RECUSAR
+MOTIVOS:
+  - DTI elevado
+  - score de crédito baixo
+  - atrasos recentes em pagamentos
+  - muitas consultas recentes
+  - emprego recente (<12m)
+  - parcela alta para crédito pessoal
+
+=== PROPOSTA LOAN8 ===
+Solicitante: carla (35 anos)
+Produto: financiamento_imobiliario
+Valor: R$ 380000.00
+Prazo: 360 meses
+Taxa: 1.2%% a.m.
+Garantia: casa_ana (R$ 520000.00)
+
+MÉTRICAS CALCULADAS:
+  Parcela estimada: R$ 5615.56
+  DTI (Debt-to-Income): 134.8%%
+  LTV (Loan-to-Value): 73.1%%
+
+SINAIS DETECTADOS:
+  [+30] dti_ruim
+  [+5] ltv_medio
+  [+10] bureau_medio
+  [-10] emprego_estavel
+
+PONTUAÇÃO TOTAL: 35
+DECISÃO: REVISAR
+MOTIVOS:
+  - DTI muito elevado
+  - LTV moderado
+  - score de crédito mediano
+  - emprego estável (>=24m)
+
+=== RESUMO ===
+Total de propostas: 8
+Aprovadas: 3
+Revisadas: 2
+Recusadas: 3
+Hard stops: 1
+
+=== FIM ===
