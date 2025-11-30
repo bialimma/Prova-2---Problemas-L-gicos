@@ -48,8 +48,12 @@ Este sistema especialista implementa um motor de decisão para análise de propo
   - Um resumo final com total de propostas, quantas aprovadas, revisadas, recusadas e com hard stop.
  
 # Exemplos de Resultados Esperados
-Executar o comando:
-?- explicacao_solucao(loan6, Decisao, Motivos).
+  Execução do comando & resultado a se esperar
+- explicacao_solucao(loan6, Decisao, Motivos).
+- Decisao = aprovar,
+Motivos = ["DTI elevado", "score de crédito excelente", 
+           "emprego estável (>=24m)", "parcela alta para crédito pessoal"].
+  
   
 
 
