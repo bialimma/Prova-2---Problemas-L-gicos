@@ -82,10 +82,10 @@ Este sistema especialista implementa um motor de decisão para análise de propo
   <img width="514" height="145" alt="image" src="https://github.com/user-attachments/assets/4e30ffa4-30e9-40f8-bf2a-da3c76e5f241" />
 
 3. Score de Crédito
-  <img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
+    <img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
 
 4. Outros Sinais
-  <img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
+    <img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
 
 ##### ********************************** #####
 # Hard Stops (Regras Eliminatórias)
@@ -106,7 +106,37 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 * Revisão: 20 ≤ Score < 50
 * Recusa: Score ≥ 50 OU hard stop
    
+# @@@@@@@@@@@@@ # RESUMO # @@@@@@@@@@@@@
+- Funcionamento geral do sistema (pipeline)
 
+1) Leitura da base de fatos (entrada.txt)
+  - principal.pl, faz consult('entrada.txt') e carrega ontologia, solicitantes, garantias e propostas.
+
+2) Cálculo de métricas
+  - Para cada proposta/7, o sistema chama metricas/4, que calcula:
+    - parcela/4 com a fórmula simplificada;
+    - dti/3 usando renda + despesas + nova parcela;
+    - ltv/3 quando há garantia relevante.
+
+3) Avaliação de hard stops
+- hardstop/2 verifica idade mínima, sanções, LTV máximo e renda inválida.
+- Se qualquer hardstop for verdadeiro, decisao/2 já devolve recusar.
+
+4) Scoring por sinais
+- sinais/2 coleta todos os sinal/3 aplicáveis (DTI, LTV, bureau, atrasos, consultas, emprego, etc.).
+- pontuacao/3 soma os pesos dos sinais e gera um score de risco.
+
+5) Decisão e explicação
+- decisao/2 combina hard stops + score + limiares para decidir:
+   - aprovar, revisar ou recusar;
+- motivos/2 traduz sinais ou hard stops em frases legíveis.
+- main/0 percorre todas as propostas, escreve:
+  - métricas,
+  - sinais,
+  - score,
+  - decisão,
+  - motivos,
+  - e um resumo final no saida.txt.
 
 
 
