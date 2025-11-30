@@ -34,7 +34,8 @@ Este sistema especialista implementa um motor de decisão para análise de propo
     - Gerará alguns "Warning's", que não são erros, pode prosseguir.
   - Abrir o "saida.txt" que será gerado na mesma pasta do projeto.
     <img width="475" height="254" alt="image" src="https://github.com/user-attachments/assets/ba9f1f03-ce18-42df-a8ca-7499cdcff08d" />
-
+  - OBS: utilizamos a fórmula dada no enunciado para realização do cálculo de prestação, entretanto, para alguns usuários não convergiram com as respostas dadas em "saida_esperada", favor considerar fórmula do enunciado.
+    <img width="663" height="52" alt="image" src="https://github.com/user-attachments/assets/d09166eb-d720-4c46-8a7a-aaf7257f8c21" />
 
  # Entrada e saída de dados 
 - entrada.txt
