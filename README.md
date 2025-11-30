@@ -49,12 +49,17 @@ Este sistema especialista implementa um motor de decisão para análise de propo
  
 # Exemplos de Resultados Esperados
   Execução do comando & resultado a se esperar
-- explicacao_solucao(loan6, Decisao, Motivos).
-- Decisao = aprovar,
-Motivos = ["DTI elevado", "score de crédito excelente", 
-           "emprego estável (>=24m)", "parcela alta para crédito pessoal"].
-  
-  
+- 1) explicacao_solucao/3
+  <img width="643" height="105" alt="image" src="https://github.com/user-attachments/assets/5bce6a6f-6fe6-4dc7-b4e4-ebc6f7a20df9" />
+- 2) motivo_falha/2
+  <img width="408" height="61" alt="image" src="https://github.com/user-attachments/assets/c09c6d1b-985f-4f94-ae4c-544849045d86" />
+- 3) motivos/2
+  <img width="681" height="99" alt="image" src="https://github.com/user-attachments/assets/a1770419-fff0-4efe-9c15-aef3093f2ffc" />
+- 4) Gerar Contraproposta
+  <img width="393" height="126" alt="image" src="https://github.com/user-attachments/assets/9cc277bf-6456-4dfd-a5a4-51ddaebaeb7a" />
+- 5) Listar todas as recusas
+  <img width="443" height="50" alt="image" src="https://github.com/user-attachments/assets/66926971-f89c-410f-ac63-260271571ae5" />
+
 
 
 
