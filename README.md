@@ -11,7 +11,6 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 - Explicabilidade completa de todas as decisões
 - Geração automática de contrapropostas para casos com DTI elevado
 
-
 #  Instalação
 - Pré-requisitos
   - SWI-Prolog 8.0 ou superior
@@ -59,6 +58,47 @@ Este sistema especialista implementa um motor de decisão para análise de propo
   <img width="393" height="126" alt="image" src="https://github.com/user-attachments/assets/9cc277bf-6456-4dfd-a5a4-51ddaebaeb7a" />
 - 5) Listar todas as recusas
   <img width="443" height="50" alt="image" src="https://github.com/user-attachments/assets/66926971-f89c-410f-ac63-260271571ae5" />
+###### Métricas e Indicadores ######
+1. DTI (Debt-to-Income Ratio)
+  Fórmula: DTI = (Despesas + Parcela) / Renda × 100
+   <img width="519" height="164" alt="image" src="https://github.com/user-attachments/assets/6f0b90f6-431b-44f1-b7d8-81f9c2fa2d0d" />
+   
+2. LTV (Loan-to-Value Ratio)
+  Fórmula: LTV = Valor Empréstimo / Valor Garantia × 100
+  <img width="514" height="145" alt="image" src="https://github.com/user-attachments/assets/4e30ffa4-30e9-40f8-bf2a-da3c76e5f241" />
+
+3. Score de Crédito
+  <img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
+
+4. Outros Sinais
+<img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
+
+##### ********************************** #####
+# Hard Stops (Regras Eliminatórias)
+- Condições que resultam em recusa automática, independente da pontuação:
+1. idade_minima: Solicitante com menos de 18 anos
+2. sancao: Solicitante em lista de sanções restritivas
+3. ltv_excedido: LTV > 90% em financiamento imobiliário
+4. renda_invalida: Renda ausente ou ≤ 0
+
+#  Sistema de Decisão
+- decisao(ID, recusar)  :- hardstop(ID, _), !.
+- decisao(ID, aprovar)  :- Score < 20, !.
+- decisao(ID, recusar)  :- Score >= 50, !.
+- decisao(ID, revisar)  :- Score >= 20, Score < 50.
+
+# Limiares
+* Aprovação: Score < 20
+* Revisão: 20 ≤ Score < 50
+* Recusa: Score ≥ 50 OU hard stop
+   
+
+
+
+
+
+   
+   
 
 
 
