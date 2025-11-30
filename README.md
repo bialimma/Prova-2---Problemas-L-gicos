@@ -76,13 +76,16 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 1. DTI (Debt-to-Income Ratio)
 - Fórmula: DTI = (Despesas + Parcela) / Renda × 100
 <img width="519" height="164" alt="image" src="https://github.com/user-attachments/assets/6f0b90f6-431b-44f1-b7d8-81f9c2fa2d0d" />
+
    
 2. LTV (Loan-to-Value Ratio)
 - Fórmula: LTV = Valor Empréstimo / Valor Garantia × 100
 <img width="514" height="145" alt="image" src="https://github.com/user-attachments/assets/4e30ffa4-30e9-40f8-bf2a-da3c76e5f241" />
 
+
 3. Score de Crédito
 <img width="565" height="115" alt="image" src="https://github.com/user-attachments/assets/a87b2e51-9ea3-441e-a7bd-dbe1c0261c5d" />
+
 
 4. Outros Sinais
 <img width="582" height="212" alt="image" src="https://github.com/user-attachments/assets/0a1d29fb-d5e6-4c88-8192-7d89dcfe947d" />
@@ -91,7 +94,7 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 # Hard Stops (Regras Eliminatórias)
 - Condições que resultam em recusa automática, independente da pontuação:
 1. idade_minima: Solicitante com menos de 18 anos
-2. sancao: Solicitante em lista de sanções restritivas
+2. sancões: Solicitante em lista de sanções restritivas
 3. ltv_excedido: LTV > 90% em financiamento imobiliário
 4. renda_invalida: Renda ausente ou ≤ 0
 
@@ -106,27 +109,27 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 * Revisão: 20 ≤ Score < 50
 * Recusa: Score ≥ 50 OU hard stop
    
-# @@@@@@@@@@@@@ # RESUMO # @@@@@@@@@@@@@
-- Funcionamento geral do sistema (pipeline)
+# @@@@@ # RESUMO # @@@@@
+# Funcionamento geral do sistema (pipeline)
 
-1) Leitura da base de fatos (entrada.txt)
+# 1) Leitura da base de fatos (entrada.txt)
   - principal.pl, faz consult('entrada.txt') e carrega ontologia, solicitantes, garantias e propostas.
 
-2) Cálculo de métricas
+# 2) Cálculo de métricas
   - Para cada proposta/7, o sistema chama metricas/4, que calcula:
     - parcela/4 com a fórmula simplificada;
     - dti/3 usando renda + despesas + nova parcela;
     - ltv/3 quando há garantia relevante.
 
-3) Avaliação de hard stops
+# 3) Avaliação de hard stops
 - hardstop/2 verifica idade mínima, sanções, LTV máximo e renda inválida.
 - Se qualquer hardstop for verdadeiro, decisao/2 já devolve recusar.
 
-4) Scoring por sinais
+# 4) Scoring por sinais
 - sinais/2 coleta todos os sinal/3 aplicáveis (DTI, LTV, bureau, atrasos, consultas, emprego, etc.).
 - pontuacao/3 soma os pesos dos sinais e gera um score de risco.
 
-5) Decisão e explicação
+# 5) Decisão e explicação
 - decisao/2 combina hard stops + score + limiares para decidir:
    - aprovar, revisar ou recusar;
 - motivos/2 traduz sinais ou hard stops em frases legíveis.
