@@ -15,23 +15,34 @@ Este sistema especialista implementa um motor de decisão para análise de propo
 #  Instalação
 - Pré-requisitos
   - SWI-Prolog 8.0 ou superior
-
+- Linux (Ubuntu / Debian)
+  - sudo apt-get install swi-prolog
+- macOS
+  - brew install swi-prolog
 - Windows
-    - Baixe o instalador em: [swi-prolog.org](https://www.swi-prolog.org)](https://www.swi-prolog.org)
+  - Baixe o instalador em: [swi-prolog.org](https://www.swi-prolog.org)](https://www.swi-prolog.org)
       
 -Clonar o Repositório
-    - https://github.com/bialimma/Prova-2---Problemas-L-gicos.git
+  - https://github.com/bialimma/Prova-2---Problemas-L-gicos.git
 
-#Execução (cmd ou prolog)
-- CMD
-- Dentro da pasta do projeto
-    - swipl -s principal.pl
+# Execução (terminal ou prolog)
+- No CMD
+- cd C:\Users\seu_usuario\Documents\credito (alterar conforme o caminho de onde está o arquivo)
+- Dentro da pasta do projeto, rodar:
+    - swipl -s principal.pl 
 - Dentro do prompt do Prolog que abrir, rode:
     - main.
 - Isso vai:
   - Ler a base de fatos de entrada.txt --> analisar todas as propostas (loan1, loan2, …) --> gerar um relatório completo em saida.txt (decisões + métricas + motivos + resumo final).
-  - Abrir o "saida.txt" que será gerado dentro da pasta clonada 
-
+  - Abrir o "saida.txt" que será gerado na mesma pasta do projeto.
+**************************************************
+- No Prolog
+  - cd('C:/Users/seu_usuario/Documents/credito'). ( (alterar conforme o caminho de onde está o arquivo)
+  - Se estiver tudo ok, aparecerá "true"
+  - Executar: [principal].
+  - Isso vai:
+    - Ler a base de fatos de entrada.txt --> analisar todas as propostas (loan1, loan2, …) --> gerar um relatório completo em saida.txt (decisões + métricas + motivos + resumo final).
+  - Abrir o "saida.txt" que será gerado na mesma pasta do projeto.
 
 
 
