@@ -1,4 +1,4 @@
-# Prova-2---Problemas-L-gicos
+# Prova-2---Problemas-Lógicos
 Desenvolvimento de um Sistema Lógico Especialista em Prolog capaz de raciocinar sobre um domínio definido
 
 # Sobre o Projeto
