@@ -50,10 +50,12 @@ Este sistema especialista implementa um motor de decisão para análise de propo
   Execução do comando & resultado a se esperar
 - 1) explicacao_solucao/3
   - Fornece decisão e motivos para qualquer proposta.
+    
   <img width="643" height="105" alt="image" src="https://github.com/user-attachments/assets/5bce6a6f-6fe6-4dc7-b4e4-ebc6f7a20df9" />
   
 - 2) motivo_falha/2
   - Explica especificamente por que uma proposta foi recusada.
+    
   <img width="408" height="61" alt="image" src="https://github.com/user-attachments/assets/c09c6d1b-985f-4f94-ae4c-544849045d86" />
   
 - 3) motivos/2
